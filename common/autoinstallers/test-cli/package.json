@@ -1,0 +1,9 @@
+{
+  "name": "test-cli",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "shelljs": "~0.8.5",
+    "chalk": "~3.0.0"
+  }
+}

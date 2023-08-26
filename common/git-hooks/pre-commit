@@ -1,0 +1,3 @@
+#!/bin/sh
+# 在 "git commit" 执行时，该钩子会被调用，执行 rush lint-staged
+rush lint-staged || exit $?

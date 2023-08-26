@@ -11,6 +11,31 @@
    * "rush my-global-command --help".
    */
   "commands": [
+    {
+      // global表示设置为全局命令。还可以设置为 bulk, 表示依次执行每一个项目下的对应命令。
+      "commandKind": "global", 
+      // 全局命令的名称
+      "name": "test-cli", 
+      "summary": "测试",
+      "description": "测试",
+      "safeForSimultaneousRushProcesses": true,
+      // 这里的名字需要和autoinstaller目录中对齐
+      "autoinstallerName": "test-cli", 
+      // 全局命令执行的脚本
+      "shellCommand": "node common/autoinstallers/test-cli/index.js" 
+    }, {
+      // global表示设置为全局命令。还可以设置为 bulk, 表示依次执行每一个项目下的对应命令。
+      "commandKind": "global", 
+      // 全局命令的名称
+      "name": "lint-staged", 
+      "summary": "lint-staged",
+      "description": "run lint-staged",
+      "safeForSimultaneousRushProcesses": true,
+      // 这里的名字需要和autoinstaller目录中对齐
+      "autoinstallerName": "lint-staged", 
+      // 全局命令执行的脚本
+      "shellCommand": "lint-staged" 
+    }
     // {
     //   /**
     //    * (Required) Determines the type of custom command.
@@ -182,6 +207,15 @@
    * For example, you might define a "--production" parameter for the "rush build" command.
    */
   "parameters": [
+    {
+      "parameterKind": "string",
+      "argumentName": "SOME_TEXT",
+      "longName": "--test",
+      "shortName": "-t",
+      "description": "传入一个参数", 
+      "associatedCommands": ["test-cli"],
+      "required": true
+    }
     // {
     //   /**
     //    * (Required) Determines the type of custom parameter.
