@@ -29,7 +29,10 @@ importers:
     specifiers: {}
 
   ../../components/component-c:
-    specifiers: {}
+    specifiers:
+      component-d: workspace:*
+    dependencies:
+      component-d: link:../component-d
 
   ../../components/component-d:
     specifiers: {}
