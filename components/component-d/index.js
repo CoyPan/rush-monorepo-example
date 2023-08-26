@@ -1,1 +1,1 @@
-console.log(`this is component-d`);
+console.log(`this is component-d v2`);

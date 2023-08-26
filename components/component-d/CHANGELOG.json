@@ -1,0 +1,17 @@
+{
+  "name": "component-d",
+  "entries": [
+    {
+      "version": "1.0.1",
+      "tag": "component-d_v1.0.1",
+      "date": "Sat, 26 Aug 2023 05:38:10 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "v2"
+          }
+        ]
+      }
+    }
+  ]
+}
